@@ -1,0 +1,293 @@
+/*27/05/2022 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ALINHAR DIVS NO CENTRO DO BODY */
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #33BADA;
+}
+
+/* CSS TELA INICIAL */
+#startScreen {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+h1 {
+    font-size: 3.9rem;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 40px;
+}
+
+h1::first-line {
+    color: #FEBE0B;
+}
+
+input {
+    width: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.third {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* TELA DO GAME */
+.stage {
+    align-self: center;
+    display: none;
+
+
+}
+
+/* QUADRADOS */
+
+
+
+
+.square {
+    width: 180px;
+    height: 180px;
+    margin: 5px;
+    background-color: grey;
+    border: 1px solid grey;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+
+.o {
+    position: relative;
+}
+
+.o:after {
+    position: absolute;
+    content: "\1F525";
+    font-size: 50px;
+    /* Usado para centralizar a imagem no meio, usa o height do square*/
+    line-height: 180px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.x {
+    position: relative;
+}
+
+.x:after {
+    position: absolute;
+    content: "\1F30A";
+    font-size: 50px;
+    /* Usado para centralizar a imagem no meio, usa o height do square*/
+    line-height: 180px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+/* TELA VENCEDOR */
+
+#squareWinner {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.9rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Responsive Displays */
+
+@media only screen and (max-width: 992px) {
+
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .square {
+        width: 150px;
+        height: 150px;
+        margin: 3px;
+    }
+
+    .o:after {
+        line-height: 150px;
+    }
+
+    .x:after {
+        line-height: 150px;
+
+
+
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    h1 {
+        font-size: 3rem;
+
+    }
+
+    .square {
+        width: 150px;
+        height: 150px;
+        margin: 3px;
+    }
+
+    .o:after {
+        line-height: 150px;
+    }
+
+    .x:after {
+        line-height: 150px;
+
+
+
+    }
+
+    #responsiveH1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    #nameWinner {
+
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+@media only screen and (max-width:480px) {
+ 
+
+    h1 {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+
+    }
+
+    input {
+        width: 180px;
+        padding: 7px;
+        margin-bottom: 5px;
+        
+
+    }
+
+    .square {
+        width: 120px;
+        height: 120px;
+        margin: 2px;
+    }
+
+    .o:after {
+        line-height: 120px;
+    }
+
+    .x:after {
+        line-height: 120px;
+
+
+
+    }
+
+    #responsiveH1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    #nameWinner {
+
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    .btn{
+        font-size: 0.7rem;
+    }
+
+}

@@ -1,0 +1,55 @@
+<!-- 27/05/22 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/controle.png" type="image/png">
+    <link rel="stylesheet" href="./css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <!-- TELA INICIAL -->
+    <div id="startScreen">
+        <h1>Jogo da<br> velha</h1>
+        <input id="jogador1" type="text" placeholder="jogador1">
+        <input id="jogador2" type="text" placeholder="jogador2">
+        <button onclick=screenGame() class="btn third" id="start">Press Start</button>
+        <a href="https://www.linkedin.com/in/yuri-lopes-100ab3208/">Desenvolvido por:Yuri Lopes</a>
+    </div>
+    <!-- TELA DO GAME -->
+    <div id="screen" class="stage">
+        <div>
+            <div id="0" class="square">
+               
+            </div>
+            <div id="1" class="square">
+               
+            </div>
+            <div id="2" class="square"></div>
+        </div>
+        <div>
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div>
+        </div>
+        <div>
+            <div id="6" class="square"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square"></div>
+        </div>
+    </div>
+
+    <!-- Tela do vencedor -->
+    <div id="squareWinner">
+        <h1 id="responsiveH1">Parabéns você foi o vencedor</h1>
+        <p id="nameWinner"></p>
+        <button onclick=resetGame() class="btn third">Reset</button>
+    </div>
+
+
+    <script src="./script/Game.js"></script>
+    <script src="./script/Interface.js"></script>
+</body>
+</html>
